@@ -1,5 +1,3 @@
-/* Create an ATM machine function*/
-
 import java.util.*;
 
 public class ATMproject{
