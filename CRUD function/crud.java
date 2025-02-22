@@ -14,6 +14,11 @@ public class crud{
         return person;
     }
 
+    //READ
+    public static Person getPersonById(int id){
+        return personMap.get(id);
+    }
+
     //METHOD FOR CAPTURING USER INPUT
     public static String getStringInput(String prompt){
         System.out.print(prompt);
@@ -46,6 +51,19 @@ public class crud{
                     int age = getIntInput("Enter age : ");
 
                     System.out.println("Person created successfully!");
+            
+                case 2:
+                    //READ
+                    int idToView = getIntInput("Enter ID to view: ");
+                    Person personToView = getPersonById(idToView);
+                    if(personToView != null){
+                        System.out.println(personToView);
+                    }
+                    else{
+                        System.out.println("Person not found!");
+                    }
+                    break;
+            
             }
         }
         while(choice != 3);
