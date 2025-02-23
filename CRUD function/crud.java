@@ -18,6 +18,16 @@ public class crud{
     public static Person getPersonById(int id){
         return personMap.get(id);
     }
+    
+    //UPDATE
+    public static Person updatePerson(int id, String name, int age){
+        Person person = personMap.get(id);
+        if(person != null){
+            person.setName(name);
+            person.setAge(age);
+        }
+        return person;
+    }
 
     //METHOD FOR CAPTURING USER INPUT
     public static String getStringInput(String prompt){
