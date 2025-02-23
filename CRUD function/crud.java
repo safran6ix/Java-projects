@@ -39,6 +39,7 @@ public class crud{
             System.out.println("\nPerson Management System");
             System.out.println("1. Create Person");
             System.out.println("2. View Person");
+            System.out.println("3. update Person");
             System.out.print("Enter your choice : ");
 
             choice = scan.nextInt();
@@ -72,7 +73,13 @@ public class crud{
                     if(personToUpdate != null){
                         String updatedName = getStringInput("Enter new name: ");
                         int updatedAge = getIntInput("Enter new age: ");
+                        updatePerson(idToUpdate, updatedName, updatedAge);
+                        System.out.println("Person updated successfully!");
                     }
+                    else{
+                        System.out.println("Person not found!");
+                    }
+                    break;
 
             }
         }
