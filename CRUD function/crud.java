@@ -63,7 +63,17 @@ public class crud{
                         System.out.println("Person not found!");
                     }
                     break;
-            
+                
+                case 3:
+                    //UPDATE
+                    int idToUpdate = getIntInput("Enter ID to update: ");
+                    Person personToUpdate = getPersonById(idToUpdate);
+
+                    if(personToUpdate != null){
+                        String updatedName = getStringInput("Enter new name: ");
+                        int updatedAge = getIntInput("Enter new age: ");
+                    }
+
             }
         }
         while(choice != 3);
