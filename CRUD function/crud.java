@@ -38,6 +38,14 @@ public class crud{
         return false;
     }
 
+    //DISPLAY ALL PERSONS
+    public static void displayAllPersons(){
+        if(){
+          
+        }
+
+    }
+
     //METHOD FOR CAPTURING USER INPUT
     public static String getStringInput(String prompt){
         System.out.print(prompt);
