@@ -28,6 +28,15 @@ public class crud{
         }
         return person;
     }
+    
+    //DELETE
+    public static boolean deletePerson(int id){
+        if(personMap.containsKey(id)){
+            personMap.remove(id);
+            return true;
+        }
+        return false;
+    }
 
     //METHOD FOR CAPTURING USER INPUT
     public static String getStringInput(String prompt){
@@ -50,6 +59,7 @@ public class crud{
             System.out.println("1. Create Person");
             System.out.println("2. View Person");
             System.out.println("3. update Person");
+            System.out.println("4. Delete Person");
             System.out.print("Enter your choice : ");
 
             choice = scan.nextInt();
