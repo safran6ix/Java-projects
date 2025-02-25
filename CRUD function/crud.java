@@ -40,8 +40,13 @@ public class crud{
 
     //DISPLAY ALL PERSONS
     public static void displayAllPersons(){
-        if(){
-          
+        if(personMap.isEmpty()){
+           System.out.println("No persons available.");
+        }
+        else{
+            for(Person person : personMap.values()){
+                System.out.println(person);
+            }
         }
 
     }
