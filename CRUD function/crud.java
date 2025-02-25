@@ -73,6 +73,8 @@ public class crud{
             System.out.println("2. View Person");
             System.out.println("3. update Person");
             System.out.println("4. Delete Person");
+            System.out.println("5. View all persons");
+            System.out.println("6. Exit");
             System.out.print("Enter your choice : ");
 
             choice = scan.nextInt();
@@ -126,12 +128,23 @@ public class crud{
                     }
                     break;
 
+                case 5:
+                    //VIEW ALL
+                    System.out.println("All Persons");
+                    displayAllPersons();
+                    break;
+
+                case 6:
+                    //EXIT
+                    System.out.println("Exiting...");
+                    break;  
+ 
+                default:
+                    System.out.println("Invalid choice. Please try again.");
             }
         }
-        while(choice != 3);
-        {
 
-        }
+        while(choice != 6);
 
     }
 }
