@@ -101,6 +101,18 @@ public class crud{
                     }
                     break;
 
+                case 4:
+                    //DELETE
+                    int idToDelete = getIntInput("Enter ID to delete: ");
+                    boolean deleted = deletePerson(idToDelete);
+                    if(deleted){
+                        System.out.println("Person delete successfully!");
+                    }
+                    else{
+                        System.out.println("Person not found!");
+                    }
+                    break;
+
             }
         }
         while(choice != 3);
