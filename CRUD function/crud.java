@@ -85,8 +85,9 @@ public class crud{
                     //CREATE
                     String name = getStringInput("Enter name : ");
                     int age = getIntInput("Enter age : ");
-
+                    createPerson(name, age);
                     System.out.println("Person created successfully!");
+                    break;
             
                 case 2:
                     //READ
@@ -107,6 +108,7 @@ public class crud{
 
                     if(personToUpdate != null){
                         String updatedName = getStringInput("Enter new name: ");
+                        System.out.println("");
                         int updatedAge = getIntInput("Enter new age: ");
                         updatePerson(idToUpdate, updatedName, updatedAge);
                         System.out.println("Person updated successfully!");
