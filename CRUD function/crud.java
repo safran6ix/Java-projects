@@ -148,6 +148,8 @@ public class crud{
 
         while(choice != 6);
 
+        scan.close();
+
     }
 }
 
