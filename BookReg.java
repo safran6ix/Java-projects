@@ -84,5 +84,8 @@ public class BookReg{
             book1 = new BookReg(title1, author1, isbn1, price1); //Constructor 03
         }
 
+
+        //Input for the second book
+        System.out.println("\nEnter details for Book 2: ");
    }
 }
