@@ -71,7 +71,18 @@ public class BookReg{
         System.out.print("Enter price (enter 0 for default): ");
         double price1 = scan.nextDouble();
         scan.nextLine();
-
+        
+        //Create first book object
+        BookReg book1;
+        if(isbn1.equals("Not Available") && price1 == 0){
+            book1 = new BookReg(title1, author1); //Constructor 01
+        }
+        else if(price1 == 0){
+            book1 = new BookReg(title1, author1, isbn1); //Constructor 02
+        }
+        else{
+            book1 = new BookReg(title1, author1, isbn1, price1); //Constructor 03
+        }
 
    }
 }
