@@ -11,7 +11,13 @@ public class BookReg{
         this.ISBN = "Not Available!";
         this.price = 0.0;
     }
-
+    
+    public BookReg(String title, String author, String ISBN){
+        this.title = title;
+        this.author = author;
+        this.ISBN = ISBN;
+        this.price = 0.0;
+    }
 
    public static void main(String[] args)
    {
