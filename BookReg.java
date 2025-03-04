@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class BookReg{
 
     //Atributes
@@ -48,8 +50,28 @@ public class BookReg{
     public static void main(String[] args)
    {
        
-    
+        Scanner scan = new Scanner(System.in);
 
-    
+        System.out.println("Enter details for Book 01 :- ");
+        
+        System.out.print("Enter Title : ");
+        String title1 = scan.nextLine();
+
+        System.out.println("Enter Author : ");
+        String author1 = scan.nextLine();
+
+        //Taking ISBN and Price
+        System.out.print("Enter ISBN (leave blank for default) : ");
+        String isbn1 = scan.nextLine();
+
+        if(isbn1.isEmpty()){
+            isbn1 = "Not Available";
+        }
+        
+        System.out.print("Enter price (enter 0 for default): ");
+        double price1 = scan.nextDouble();
+        scan.nextLine();
+
+
    }
 }
