@@ -116,5 +116,12 @@ public class BookReg{
         else{
             book2 = new BookReg(title2, author2, isbn2, price2);
         }
+
+        //Display book details
+        System.out.println("\nBook 1 details : ");
+        System.out.println(book1.getBookDetails());
+
+        System.out.println("\nBook 2 Details : ");
+        System.out.println(book2.getBookDetails());
    }
 }
