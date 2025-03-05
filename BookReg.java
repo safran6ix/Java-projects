@@ -123,5 +123,13 @@ public class BookReg{
 
         System.out.println("\nBook 2 Details : ");
         System.out.println(book2.getBookDetails());
+
+        //Search a book by ISBN
+        System.out.print("\nEnter ISBN to search for a book : ");
+        String searchISBN = scan.nextLine();
+
+        System.out.println("\nSearch Result : ");
+        System.out.println(book1.getBookDetails(searchISBN));
+        System.out.println(book2.getBookDetails(searchISBN));
    }
 }
