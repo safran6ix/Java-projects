@@ -92,7 +92,20 @@ public class BookReg{
         String title2 = scan.nextLine();
 
         System.out.print("Enter Author : ");
+        String author2 = scan.nextLine();
 
+        System.out.print("Enter ISBN (leave blank for default) : ");
+        String isbn2 = scan.nextLine();
+        
+        if(isbn2.isEmpty()){
+            isbn2 = "Not Available";
+        }
+
+        System.out.print("EnterbPrice (Enter 0 for default) : ");
+        double price2 = scan.nextDouble();
+        scan.nextLine();
+
+        //Create second Book object
 
    }
 }
