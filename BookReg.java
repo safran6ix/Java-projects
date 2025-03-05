@@ -87,5 +87,12 @@ public class BookReg{
 
         //Input for the second book
         System.out.println("\nEnter details for Book 2: ");
+
+        System.out.print("\nEnter Title : ");
+        String title2 = scan.nextLine();
+
+        System.out.print("Enter Author : ");
+
+
    }
 }
