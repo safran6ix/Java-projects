@@ -106,6 +106,15 @@ public class BookReg{
         scan.nextLine();
 
         //Create second Book object
-
+        BookReg book2;
+        if(isbn2.equals("Not Available") && price2 == 0){
+            book2 = new BookReg(title2, author2);
+        }
+        else if(price2 == 0){
+            book2 = new BookReg(title2, author2, isbn2);
+        }
+        else{
+            book2 = new BookReg(title2, author2, isbn2, price2);
+        }
    }
 }
