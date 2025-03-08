@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 class Calculator{
@@ -45,11 +44,6 @@ class Calculator{
             System.out.print("Select the correct operator !!!");
         }
     }
-
-    void example(int a, int b){
-        int total = a + b;
-        System.out.print(total);
-    }
 }
 
 public class Main{
@@ -80,8 +74,5 @@ public class Main{
         else if(cal.operator.equals("-")){
             cal.sub();
         }
-
-        cal.example(30, 40);
-
     }
 }
