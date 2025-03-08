@@ -46,7 +46,7 @@ class Calculator{
     }
 }
 
-public class Main{
+public class Calculator_Main{
     public static void main(String[] args)
     {
         Scanner scan = new Scanner(System.in);
