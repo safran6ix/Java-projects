@@ -65,6 +65,7 @@ public class ATMproject{
                         System.out.println("---------------RECIPT----------------");
                         System.out.println("Welcome to Codify6ix mini ATM");
                         System.out.println("_____________________________________");
+                        System.out.println("Dear " + name + " your current account status,");
                         System.out.println("Available balance is : " + balance);
                         System.out.println("Amount deposite :      " + AddAmount);
                         System.out.println("Amount taken :         " + TakeAmount);
