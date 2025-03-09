@@ -7,20 +7,20 @@ public class ATMproject{
         int balance = 100;
         int AddAmount = 0;
         int TakeAmount = 0;
-
         String name;
+
         Scanner scanner = new Scanner(System.in);
         
         //we have to take an input by an user
-        System.out.println("Enter your pin number");
-        
+        System.out.print("Enter your pin number : ");
         int password = scanner.nextInt();
 
-        if(password == pin)
-        {
-            System.out.println("Enter your name");
+        if(password == pin) {
+
+            System.out.print("Enter your name : ");
             name = scanner.next();
             System.out.println("Welcome___" + name);
+            System.out.println("");
 
             while (true) {
                 System.out.println("Press 1 to check your balance");
@@ -29,6 +29,7 @@ public class ATMproject{
                 System.out.println("Press 4 to take recipt");
                 System.out.println("press 5 to Exit");
 
+                System.out.print("Enter opt number : ");
                 int opt = scanner.nextInt();
                 switch(opt)
                 {
@@ -37,14 +38,14 @@ public class ATMproject{
                         break;
 
                     case 2:
-                        System.out.println("How much amount did you want to ADD to your account");
+                        System.out.print("How much amount did you want to ADD to your account : ");
                         AddAmount = scanner.nextInt();
                         System.out.println("Successfully credited!");
                         balance = AddAmount + balance;
                     break;
 
                     case 3:
-                        System.out.println("How much amount did you want to take");
+                        System.out.print("How much amount did you want to take : ");
                         TakeAmount = scanner.nextInt();
                         if(TakeAmount>balance)
                         {
@@ -80,8 +81,8 @@ public class ATMproject{
                 }
             }
         }
-        else
-        {
+
+        else {
             System.out.print("Wrong pin number...!");
             System.out.print(" ");
             System.out.print("Try again...!");
