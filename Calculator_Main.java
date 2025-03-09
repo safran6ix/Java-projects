@@ -74,5 +74,8 @@ public class Calculator_Main{
         else if(cal.operator.equals("-")){
             cal.sub();
         }
+        else{
+            System.out.print("Error...!!!");
+        }
     }
 }
