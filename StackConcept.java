@@ -30,5 +30,15 @@ public class StackConcept{
         boolean ea = !st.empty();
         System.out.println(ea);
 
+        //SEARCH
+        //find the position of 2
+        System.out.println(st);
+        int po2 = st.search(2);
+        System.out.println("Position of two is : " + po2);
+
+        //find the position of 4
+        System.out.println(st);
+        int po4 = st.search(4);
+        System.out.println("Position of four is : " + po4);
     }
 }
