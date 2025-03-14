@@ -27,6 +27,8 @@ public class StackConcept{
         boolean e = st.empty();
         System.out.println(e);
 
+        boolean ea = !st.empty();
+        System.out.println(ea);
 
     }
 }
