@@ -16,6 +16,25 @@ class MinStack{
            minStack.push(x);
         }
     }
+
+    public void pop(){
+        if(!stack.isEmpty()){
+            int popped = stack.pop();
+            if(popped == minStack.peek()){
+                minStack.pop();
+            }
+        }
+    }
+
+    public int top(){
+        return stack.peek();
+    }
+
+    public int getMin(){
+        return minStack.peek();
+    }
+
+
 }
 
 public class Defstack{
@@ -24,6 +43,17 @@ public class Defstack{
 
         MinStack minStack = new MinStack();
 
+        minStack.push(6);
+        minStack.push(5);
+        minStack.push(4);
+
+        System.out.println(minStack.getMin());
+        minStack.pop();
+
+        System.out.println(minStack.getMin());
+        minStack.pop();
+
+        System.out.println(minStack.getMin());
 
     }
 }
