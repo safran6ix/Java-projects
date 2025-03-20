@@ -12,7 +12,12 @@ public class Reverseword_stack{
             stack.push(c);
         }
 
+        StringBuilder reversed = new StringBuilder();
+        while(!stack.isEmpty()){
+            reversed.append(stack.pop());
+        }
 
+        System.out.println("Reversed word : " + reversed);
 
     }
 }
