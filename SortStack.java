@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.Stack;
 
 class SortStack {
@@ -23,7 +24,12 @@ class SortStack {
     }
 
     public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
         Stack<Integer> stack = new Stack<>();
+
+        System.out.println("Enter the numbers : ");
+
         stack.push(30);
         stack.push(10);
         stack.push(50);
