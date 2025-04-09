@@ -29,15 +29,14 @@ class SortStack {
         Stack<Integer> stack = new Stack<>();
 
         System.out.println("Enter the numbers : ");
+        int num1 = scan.nextInt();
+        stack.push(num1);
+        int num2 = scan.nextInt();
+        stack.push(num2);
+        int num3 = scan.nextInt();
+        stack.push(num3);
 
-        stack.push(30);
-        stack.push(10);
-        stack.push(50);
-        stack.push(20);
-        stack.push(70);
-        stack.push(200);
-        stack.push(300);
-
+        System.out.println("Your shortage numbers");
         sort(stack);
 
         while (!stack.isEmpty()) {
