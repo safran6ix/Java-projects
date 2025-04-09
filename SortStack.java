@@ -29,9 +29,8 @@ class SortStack {
         stack.push(50);
         stack.push(20);
         stack.push(70);
-        stack.push(80);
-        stack.push(120);
-        stack.push(140);
+        stack.push(200);
+        stack.push(300);
 
         sort(stack);
 
