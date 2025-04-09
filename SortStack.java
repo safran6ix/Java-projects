@@ -35,8 +35,8 @@ class SortStack {
         sort(stack);
 
         while (!stack.isEmpty()) {
-            System.out.print(stack.pop() + " ");
+            System.out.println(stack.pop() + " ");
         }
-        // Output will be sorted: 10 20 30 50
+        System.out.print("Program Ended...");
     }
 }
