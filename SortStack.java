@@ -35,6 +35,8 @@ class SortStack {
         stack.push(num2);
         int num3 = scan.nextInt();
         stack.push(num3);
+        int num4 = scan.nextInt();
+        stack.push(num4);
 
         System.out.println("Your shortage numbers");
         sort(stack);
