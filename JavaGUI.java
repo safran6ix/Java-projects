@@ -8,6 +8,10 @@ public class JavaGUI{
 
         JFrame frame = new JFrame("GUI");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        //set background color
+        frame.getContentPane().setBackground(Color.GREEN);
+
         frame.setSize(400, 400);
         frame.setVisible(true);
 
