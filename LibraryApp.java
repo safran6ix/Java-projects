@@ -36,6 +36,21 @@ class LibraryBook{
 public class LibraryApp{
     public static void main(String[] args)
     {
+       Scanner scan = new Scanner(System.in);
+
+       System.out.println("Enter Details for Book 1:");
+       System.out.print("Book ID1: ");
+       String bookId1 = scan.nextLine();
+
+       System.out.print("Title: ");
+       String title1 = scan.nextLine();
+
+       System.out.print("Author: ");
+       String author1 = scan.nextLine();
+
+       System.out.print("Copies Available: ");
+       int copiesAvailable1 = scan.nextInt();
+       scan.nextLine();
 
 
     }
