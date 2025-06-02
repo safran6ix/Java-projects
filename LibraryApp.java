@@ -13,6 +13,17 @@ class LibraryBook{
         this.copiesAvailable = copiesAvailable;
     }
 
+    public void lendBook(int copiesRequested){
+        if(copiesRequested > copiesAvailable){
+            System.out.println("Not enough copies Available, please check back later");
+        }
+        else{
+            copiesAvailable -= copiesRequested;
+            System.out.println("Book issued successfully!");
+        }
+    }
+
+
 }
 
 
