@@ -23,7 +23,13 @@ class LibraryBook{
         }
     }
 
-
+    public void printBookDetails(){
+        System.out.println("Book ID: " + bookId);
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Copies Available: " + copiesAvailable);
+        System.out.println("-----------------------------");
+    }
 }
 
 
@@ -31,7 +37,6 @@ public class LibraryApp{
     public static void main(String[] args)
     {
 
-       System.out.println("Hello World");
 
     }
 }
