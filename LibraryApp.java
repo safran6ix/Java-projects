@@ -52,7 +52,7 @@ public class LibraryApp{
        int copiesAvailable1 = scan.nextInt();
        scan.nextLine();
 
-       System.out.println("\nEnter Deatials for Book 2:");
+       System.out.println("\nEnter Details for Book 2:");
        System.out.print("Book ID2: ");
        String bookId2 = scan.nextLine();
 
