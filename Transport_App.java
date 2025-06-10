@@ -45,6 +45,21 @@ class Driver{
     }
 }
 
+class Bus extends Vehicle{
+    private Driver driver;
+
+    public Bus(String brand, double speed, String engineType, Driver driver){
+        super(brand, speed, engineType);
+        this.driver = driver;
+    }
+    public void start(){
+        System.out.println("The bus is starting with a smooth roar...");
+    }
+    public void displayDetails(){
+        super.displayDetails();
+        driver.displayDriverInfo();
+    }
+}
 
 
 public class Transport_App{
