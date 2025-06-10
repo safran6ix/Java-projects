@@ -20,6 +20,17 @@ class Vehicle{
     }
 }
 
+class Engine{
+    protected String engineType;
+
+    public Engine(String engineType){
+        this.engineType = engineType;
+    }
+    public void displayEngineInfo(){
+        System.out.println("Engine Type: " + engineType);
+    }
+}
+
 public class Transport_App{
     public static void main(String[] args)
     {
