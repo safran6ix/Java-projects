@@ -31,6 +31,22 @@ class Engine{
     }
 }
 
+class Driver{
+    private String name;
+    private String licenseNumber;
+
+    public Driver(String name, String licenseNumber){
+        this.name = name;
+        this.licenseNumber = licenseNumber;
+    }
+    public void displayDriverInfo(){
+        System.out.println("Driver Name: " + name);
+        System.out.println("License Number: " + licenseNumber);
+    }
+}
+
+
+
 public class Transport_App{
     public static void main(String[] args)
     {
