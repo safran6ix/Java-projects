@@ -89,5 +89,20 @@ public class Transport_App{
     public static void main(String[] args)
     {
 
+      Driver drivernameone = new Driver("John", "DL12345");
+      Driver drivernametwo = new Driver("Doe", "DL67890");
+
+      Bus citybus = new Bus("Volvo", 60.5, "Diesel", drivernameone);
+      Truck truck = new Truck("Benze", 80.0, "Turbo Diesel", drivernametwo);
+
+      System.out.println("=== Bus Details ===");
+      citybus.start();
+      citybus.displayDetails();
+
+      System.out.println("");
+
+      System.out.println("=== Truck Details ===");
+      truck.start();
+      truck.displayDetails();
     }
 }
