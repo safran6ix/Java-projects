@@ -52,6 +52,7 @@ class Bus extends Vehicle{
         super(brand, speed, engineType);
         this.driver = driver;
     }
+
     public void start(){
         System.out.println("The bus is starting with a smooth roar...");
     }
@@ -60,6 +61,28 @@ class Bus extends Vehicle{
         driver.displayDriverInfo();
     }
 }
+
+class Truck extends Vehicle{
+    private Driver driver;
+
+    public Truck(String brand, double speed, String engineType, Driver driver){
+        super(brand, speed, engineType);
+        this.driver = driver;
+    }
+
+    @Override
+    public void start() {
+        System.out.println("The truck is starting with a powerful rumble...");
+    }
+
+    @Override
+    public void displayDetails() {
+        super.displayDetails();
+        driver.displayDriverInfo();
+    }
+}
+
+
 
 
 public class Transport_App{
