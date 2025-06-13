@@ -27,9 +27,26 @@ public class TryCatchException{
             if(username.length() < 6){
                 throw new InvalidUserName();
             }
+
+            //Prompt user for password
+            System.out.print("Enter password: ");
+            String password = scan.nextLine();
+
+            if(password.length() < 8){
+                throw new InvalidPasswordLength();
+            }
+
+            System.out.println("Username and password accepted!");
+
         }
         catch (InvalidUserName e){
             System.out.println("Username Error: " + e.getMessage());
+        }
+        catch (InvalidPasswordLength e){
+            System.out.println("Password Error: " + e.getMessage());
+        }
+        finally {
+
         }
     }
 }
