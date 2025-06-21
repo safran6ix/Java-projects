@@ -68,6 +68,20 @@ class PizzaOrder{
         }
     }
 
+    public double calculateTotalPrice(){
+        double total = getBasePrice();
+        total += toppingCount * 1.50;
+        if(isDelivery){
+            total += 5.00;
+        }
+        return total;
+    }
+
+    public double calculateTotalPrice(double discountPercentage){
+        double total = calculateTotalPrice();
+        double discountAmount = (discountPercentage / 100.0) * total;
+        return total - discountAmount;
+    }
 
 }
 
