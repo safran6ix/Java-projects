@@ -57,6 +57,17 @@ class PizzaOrder{
         }
     }
 
+    public double getBasePrice(){
+        switch(size.toLowerCase()){
+            case "medium":
+                return 10.00;
+            case "large":
+                return 12.00;
+            default:
+                return 8.00;
+        }
+    }
+
 
 }
 
