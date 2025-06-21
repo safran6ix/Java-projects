@@ -14,6 +14,22 @@ class PizzaOrder{
         this.toppingCount = 0;
         this.isDelivery = false;
     }
+
+    public PizzaOrder(String orderID, String customerName){
+        this.orderID = orderID;
+        this.customerName = customerName;
+        this.size = "Small";
+        this.toppingCount = 0;
+        this.isDelivery = false;
+    }
+
+    public PizzaOrder(String orderID, String customerName, String size, int toppingCount, Boolean isDelivery){
+        this.orderID = orderID;
+        this.customerName = customerName;
+        this.size = size;
+        this.toppingCount = toppingCount;
+        this.isDelivery = isDelivery;
+    }
 }
 
 public class PizzaApp{
