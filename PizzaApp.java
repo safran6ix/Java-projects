@@ -30,6 +30,34 @@ class PizzaOrder{
         this.toppingCount = toppingCount;
         this.isDelivery = isDelivery;
     }
+
+    public String getOrderID(){
+        return orderID;
+    }
+    public String getCustomerName(){
+        return customerName;
+    }
+    public String getSize(){
+        return size;
+    }
+    public int getToppingCount(){
+        return toppingCount;
+    }
+    public boolean getIsDelivery(){
+        return isDelivery;
+    }
+
+    public void setSize(String size){
+        if(size.equalsIgnoreCase("small") || size.equalsIgnoreCase("Medium") || size.equalsIgnoreCase("Large")){
+            this.size = size;
+        }
+        else{
+            System.out.println("Invalid Size... Default size is 'small' ");
+            this.size = "Small";
+        }
+    }
+
+
 }
 
 public class PizzaApp{
