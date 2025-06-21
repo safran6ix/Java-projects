@@ -83,6 +83,16 @@ class PizzaOrder{
         return total - discountAmount;
     }
 
+    public void displayOrderDetails(){
+        System.out.println("Order ID      : " + orderID);
+        System.out.println("Customer Name : " + customerName);
+        System.out.println("Pizza Size    : " + size);
+        System.out.println("Toppings      : " + toppingCount);
+        System.out.println("Delivery      : " + (isDelivery ? "Yes" : "No"));
+        System.out.printf("Total price : $%.2f\n", calculateTotalPrice());
+        System.out.println("---------------------------------");
+    }
+
 }
 
 public class PizzaApp{
