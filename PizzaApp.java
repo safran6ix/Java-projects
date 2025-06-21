@@ -99,7 +99,18 @@ public class PizzaApp{
     public static void main(String[] args)
     {
 
+      PizzaOrder order1 = new PizzaOrder();
+      order1.setSize("Extra Large");
+      order1.displayOrderDetails();
 
+      PizzaOrder order2 = new PizzaOrder("0102", "John");
+      order2.setSize("Medium");
+      order2.displayOrderDetails();
 
+      PizzaOrder order3 = new PizzaOrder("0103", "alice", "Large", 3 ,true);
+      order3.displayOrderDetails();
+
+      System.out.printf("Discount price for %s: $%.2f\n", order3.getCustomerName(), order3.calculateTotalPrice(10.0));
+      System.out.println("------------------------------------------------------------");
     }
 }
