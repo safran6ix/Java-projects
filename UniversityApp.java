@@ -117,6 +117,15 @@ class Department {
     }
 }
 
+class Printer {
+    public void printCourseList(ArrayList<Course> courses) {
+        System.out.println("Printing Course List:");
+        for (Course course : courses) {
+            course.displayCourseDetails();
+        }
+    }
+}
+
 public class UniversityApp{
     public static void main(String[] args)
     {
