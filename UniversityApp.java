@@ -61,6 +61,40 @@ class Course{
     }
 }
 
+class Student extends Person{
+    private String major;
+    private ArrayList<Course> courses;
+
+    public Student(String name, String id, String major){
+        super(name, id);
+        this.major = major;
+        this.courses = new ArrayList<>();
+    }
+
+    public void enrollCourse(Course course){
+        if(courses.size() < 3){
+            courses.add(course);
+        }
+        else{
+            System.out.println("Cannot enroll in more than 3 courses.");
+        }
+    }
+
+    @Override
+    public void displayPersonDetails() {
+        super.displayPersonDetails();
+        System.out.println("Major: " + major);
+        System.out.println("Enrolled Courses:");
+        for(Course course : courses){
+            course.displayCourseDetails();
+        }
+    }
+
+    public ArrayList<Course> getCourses(){
+        return courses;
+    }
+}
+
 public class UniversityApp{
     public static void main(String[] args)
     {
