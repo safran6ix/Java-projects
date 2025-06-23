@@ -29,6 +29,24 @@ class Person{
     }
 }
 
+class Professor extends Person{
+    private String subjectSpecialty;
+    private Office office; //Composition
+
+    public Professor(String name, String id, String subjectSpecialty, Office office){
+        super(name, id);
+        this.subjectSpecialty = subjectSpecialty;
+        this.office = office;
+    }
+
+    @Override
+    public void displayPersonDetails() {
+        super.displayPersonDetails();
+        System.out.println("Subject Specialty: " + subjectSpecialty);
+        office.displayOfficeDetails(); //Composition use
+    }
+}
+
 public class UniversityApp{
     public static void main(String[] args)
     {
