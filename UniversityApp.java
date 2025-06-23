@@ -14,6 +14,21 @@ class Office{
     }
 }
 
+class Person{
+    protected String name;
+    protected String id;
+
+    public Person(String name, String id){
+        this.name = name;
+        this.id = id;
+    }
+
+    public void displayPersonDetails(){
+        System.out.println("Name:" + name);
+        System.out.println("ID: " + id);
+    }
+}
+
 public class UniversityApp{
     public static void main(String[] args)
     {
