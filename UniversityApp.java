@@ -47,6 +47,20 @@ class Professor extends Person{
     }
 }
 
+class Course{
+    private String courseCode;
+    private String courseTitle;
+
+    public Course(String courseCode, String courseTitle){
+        this.courseCode = courseCode;
+        this.courseTitle = courseTitle;
+    }
+
+    public void displayCourseDetails(){
+        System.out.println("Course Code: " + courseCode + ", Title: " + courseTitle);
+    }
+}
+
 public class UniversityApp{
     public static void main(String[] args)
     {
