@@ -95,6 +95,28 @@ class Student extends Person{
     }
 }
 
+class Department {
+    private String departmentName;
+    private ArrayList<Professor> professors;
+
+    public Department(String departmentName) {
+        this.departmentName = departmentName;
+        this.professors = new ArrayList<>();
+    }
+
+    public void addProfessor(Professor prof) {
+        professors.add(prof);
+    }
+
+    public void displayDepartmentDetails() {
+        System.out.println("Department: " + departmentName);
+        for (Professor prof : professors) {
+            prof.displayPersonDetails();
+            System.out.println("------------------");
+        }
+    }
+}
+
 public class UniversityApp{
     public static void main(String[] args)
     {
