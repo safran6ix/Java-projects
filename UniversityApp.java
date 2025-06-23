@@ -130,7 +130,42 @@ public class UniversityApp{
     public static void main(String[] args)
     {
 
+        //Create Office objects
+        Office office1 = new Office("A101", 2);
+        Office office2 = new Office("B202", 3);
 
+        //Create Professor objects
+        Professor prof1 = new Professor("Dr.Alice", "P001", "Computer Science", office1);
+        Professor prof2 = new Professor("Dr.Bob", "P002", "Methematics", office2);
+
+        //Create Department and add Professors (Aggregation)
+        Department csDept = new Department("Computer Science");
+        csDept.addProfessor(prof1);
+        csDept.addProfessor(prof2);
+
+        // Create Course objects
+        Course c1 = new Course("CS101", "Intro to CS");
+        Course c2 = new Course("CS102", "Data Structures");
+        Course c3 = new Course("CS103", "Algorithms");
+
+        // Create Student and enroll in Courses (Association)
+        Student student = new Student("Charlie", "S1001", "Computer Science");
+        student.enrollCourse(c1);
+        student.enrollCourse(c2);
+        student.enrollCourse(c3);
+
+        // Create Printer and print course list (Dependency)
+        Printer printer = new Printer();
+
+        // Displaying Information
+        System.out.println("=== Department Details ===");
+        csDept.displayDepartmentDetails();
+
+        System.out.println("=== Student Details ===");
+        student.displayPersonDetails();
+
+        System.out.println("=== Printer Output ===");
+        printer.printCourseList(student.getCourses());
 
     }
 }
