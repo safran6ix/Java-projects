@@ -19,6 +19,7 @@ public class ATMproject{
 
             System.out.print("Enter your name : ");
             name = scanner.next();
+            System.out.println("*********************************************************");
             System.out.println("Welcome___" + name);
             System.out.println("");
 
@@ -66,9 +67,9 @@ public class ATMproject{
                         System.out.println("Welcome to Codify6ix mini ATM");
                         System.out.println("_____________________________________");
                         System.out.println("Dear " + name + " your current account status,");
-                        System.out.println("Available balance is : " + balance);
-                        System.out.println("Amount deposite :      " + AddAmount);
-                        System.out.println("Amount taken :         " + TakeAmount);
+                        System.out.println("Available balance is :  " + balance);
+                        System.out.println("Amount deposite      :  " + AddAmount);
+                        System.out.println("Amount taken         :  " + TakeAmount);
                         System.out.println("_____________________________________");
                         System.out.println("Thank You!___Come again!");
                         System.out.println(" ");  
