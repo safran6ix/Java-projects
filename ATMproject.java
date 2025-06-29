@@ -21,7 +21,7 @@ public class ATMproject{
             name = scanner.next();
             System.out.println("*********************************************************");
             System.out.println("Welcome___" + name);
-            System.out.println("");
+            System.out.println(" ");
 
             while (true) {
                 System.out.println("Press 1 to check your balance");
