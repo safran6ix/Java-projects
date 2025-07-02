@@ -41,6 +41,24 @@ class UserAccount{
     public String toFileString() {
         return accountNumber + "|" + pin + "|" + balance;
     }
+}
+
+class FileManager{
+    public static UserAccount loadAccount(String accNum) throws IOException{
+        BufferedReader br = new BufferedReader(new FileReader("accounts.txt"));
+        String line;
+        while((line = br.readLine()) != null){
+            String[] parts = line.split("\\|");
+            if(parts[0].equals(accNum)){
+                br.close();
+                return new UserAccount(parts[0], parts[1], Double.parseDouble(parts[2]));
+            }
+        }
+        br.close();
+        return null;
+    }
+
+
 
 }
 
