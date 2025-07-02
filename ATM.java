@@ -14,6 +14,33 @@ class UserAccount{
         this.balance = balance;
     }
 
+    public boolean validatePIN(String inputPin){
+        return this.pin.equals(inputPin);
+    }
+
+    public void deposit(double amount){
+        balance += amount;
+        System.out.println("Deposited: " + amount);
+    }
+
+    public boolean withdraw(double amount){
+        if(amount > balance) return false;
+        balance -= amount;
+        System.out.println("Withdrawn: " + amount);
+        return true;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String toFileString() {
+        return accountNumber + "|" + pin + "|" + balance;
+    }
 
 }
 
