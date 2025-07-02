@@ -127,5 +127,25 @@ public class ATM{
             return;
         }
 
+        System.out.print("Enter PIN: ");
+        String pin = sc.nextLine();
+
+        if (!user.validatePIN(pin)) {
+            System.out.println("Invalid PIN.");
+            return;
+        }
+
+        int choice;
+        do {
+            System.out.println("\nATM Menu:");
+            System.out.println("1. Check Balance");
+            System.out.println("2. Deposit Money");
+            System.out.println("3. Withdraw Money");
+            System.out.println("4. Mini Statement");
+            System.out.println("5. Exit");
+            System.out.print("Enter choice: ");
+            choice = sc.nextInt();
+
+
     }
 }
