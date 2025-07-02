@@ -113,11 +113,19 @@ class FileManager{
 }
 
 public class ATM{
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException
     {
 
         Scanner sc = new Scanner(System.in);
 
+        System.out.print("Enter account number: ");
+        String accNum = sc.nextLine();
+
+        UserAccount user = FileManager.loadAccount(accNum);
+        if (user == null) {
+            System.out.println("Account not found.");
+            return;
+        }
 
     }
 }
