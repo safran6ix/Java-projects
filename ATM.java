@@ -146,6 +146,38 @@ public class ATM{
             System.out.print("Enter choice: ");
             choice = sc.nextInt();
 
+            switch (choice) {
+                case 1:
+                    System.out.println("Balance: " + user.getBalance());
+                    break;
+                case 2:
+                    System.out.print("Enter amount to deposit: ");
+                    double dep = sc.nextDouble();
+                    user.deposit(dep);
+                    FileManager.logTransaction(accNum, "Deposited: " + dep);
+                    break;
+                case 3:
+                    System.out.print("Enter amount to withdraw: ");
+                    double wd = sc.nextDouble();
+                    if (user.withdraw(wd)) {
+                        FileManager.logTransaction(accNum, "Withdrawn: " + wd);
+                    } else {
+                        System.out.println("Insufficient balance.");
+                    }
+                    break;
+                case 4:
+                    FileManager.showMiniStatement(accNum);
+                    break;
+                case 5:
+                    FileManager.saveAccount(user);
+                    System.out.println("Session ended. Thank you!");
+                    break;
+                default:
+                    System.out.println("Invalid option.");
+            }
+        } while (choice != 5);
+
+        sc.close();
 
     }
 }
