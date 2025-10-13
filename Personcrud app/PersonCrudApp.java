@@ -49,15 +49,15 @@ public class PersonCrudApp {
         }
     }
 
-    //METHOD FOR CAPTURING USER INPUT
-    public static String getStringInput(String prompt){
-        System.out.println(prompt);
+    // Method for capturing user input
+    public static String getStringInput(String prompt) {
+        System.out.print(prompt);
         return scanner.nextLine();
     }
 
-    public static int getIntInput(String prompt){
-        System.out.println(prompt);
-        return scanner.nextLine();
+    public static int getIntInput(String prompt) {
+        System.out.print(prompt);
+        return scanner.nextInt();
     }
 
     public static void main(String[] args)
@@ -155,4 +155,42 @@ class Person{
     private String name;
     private int age;
 
+    //CONSTRUCTOR
+    public Person(int id, String name, int age){
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getters and Setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // ToString method for printing the object
+    @Override
+    public String toString() {
+        return "Person{id=" + id + ", name='" + name + "', age=" + age + "}";
+      
+    }
 }
