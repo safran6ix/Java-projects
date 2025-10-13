@@ -69,7 +69,7 @@ public class PersonCrudApp {
             System.out.println("\nPerson Management System");
             System.out.println("1. Create Person");
             System.out.println("2. View Person");
-            System.out.println("3. Delete Person");
+            System.out.println("3. Update Person");
             System.out.println("4. Delete Person");
             System.out.println("5. View All Persons");
             System.out.println("6. Exit");
