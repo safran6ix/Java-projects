@@ -49,7 +49,16 @@ public class PersonCrudApp {
         }
     }
 
-    
+    //METHOD FOR CAPTURING USER INPUT
+    public static String getStringInput(String prompt){
+        System.out.println(prompt);
+        return scanner.nextLine();
+    }
+
+    public static int getIntInput(String prompt){
+        System.out.println(prompt);
+        return scanner.nextLine();
+    }
 
     public static void main(String[] args)
     {
