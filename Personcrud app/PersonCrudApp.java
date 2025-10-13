@@ -6,6 +6,12 @@ public class PersonCrudApp {
     private static int currentId = 1; //ID Generataor
     private static Scanner Scanner = new Scanner(System.in);
 
+    // CREATE
+    public static Person createPerson(String name, int age) {
+        Person person = new Person(currentId++, name, age);
+        personMap.put(person.getId(), person);
+        return person;
+    }
 
     public static void main(String[] args)
     {
@@ -20,8 +26,11 @@ public class PersonCrudApp {
 
             switch (choice) {
                 case 1:
-                    //CREATE    
-
+                     // CREATE
+                    String name = getStringInput("Enter name: ");
+                    int age = getIntInput("Enter age: ");
+                    createPerson(name, age);
+                    System.out.println("Person created successfully!");
                     break;
             
                 default:
