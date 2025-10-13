@@ -37,6 +37,20 @@ public class PersonCrudApp {
         return false;
     }
 
+    //DISPLAY ALL PERSONS
+    public static void displayAllPersons(){
+        if(personMap.isEmpty()){
+             System.out.println("No persons available");
+        }
+        else{
+            for(Person person : personMap.values()){
+                System.out.println(person);
+            }
+        }
+    }
+
+    
+
     public static void main(String[] args)
     {
 
