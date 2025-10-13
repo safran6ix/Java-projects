@@ -86,12 +86,65 @@ public class PersonCrudApp {
                     createPerson(name, age);
                     System.out.println("Person created successfully!");
                     break;
-            
+
+                case 2:
+                    //READ
+                    int idToView = getIntInput("Enter ID to view: ");
+                    Person personToView = getPersonById(idToView);
+                    if(personToView != null){
+                        System.out.println(personToView);
+                    }
+                    else{
+                        System.out.println("Person not found");
+                    }
+                    break;
+                
+                case 3:
+                    //UPDATE
+                    int idToUpdate = getIntInput("Enter ID to update: ");
+                    Person personToUpdate = getPersonById(idToUpdate);
+                    if (personToUpdate != null) {
+                        
+                        String updatedName = getStringInput("Enter new name: ");
+                        
+                        System.out.println(" ");
+                        int updatedAge = getIntInput("Enter new age: ");
+                        updatePerson(idToUpdate, updatedName, updatedAge);
+                        System.out.println("Person updated successfully!");
+                    } else {
+                        System.out.println("Person not found!");
+                    }
+                    break;
+
+                case 4:
+                    //DELETE
+                    int idToDelete = getIntInput("Enter ID to delete: ");
+                    boolean deleted = deletePerson(idToDelete);
+                    if (deleted) {
+                        System.out.println("Person deleted successfully!");
+                    } else {
+                        System.out.println("Person not found!");
+                    }
+                    break;
+
+                case 5:
+                    //VIEW ALL
+                    System.out.println("All Persons:");
+                    displayAllPersons();
+                    break;
+
+                case 6:
+                    //EXIT
+                    System.out.println("Exiting...");
+                    break;
+                
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
 
-       } while();
+       } while(choice != 6);
+    
+       scanner.close();
 
     }    
 }
