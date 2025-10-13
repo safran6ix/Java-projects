@@ -4,7 +4,7 @@ public class PersonCrudApp {
 
     private static Map<Integer, Person> personMap = new HashMap<>();
     private static int currentId = 1; //ID Generataor
-    private static Scanner Scanner = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
     // CREATE
     public static Person createPerson(String name, int age) {
@@ -68,7 +68,14 @@ public class PersonCrudApp {
           
             System.out.println("\nPerson Management System");
             System.out.println("1. Create Person");
-            System.out.println("3. View Person");
+            System.out.println("2. View Person");
+            System.out.println("3. Delete Person");
+            System.out.println("4. Delete Person");
+            System.out.println("5. View All Persons");
+            System.out.println("6. Exit");
+            System.out.println("Enter your choice: ");
+            choice = scanner.nextInt();
+            scanner.nextLine(); //consume newline left-over after nextInt()
             
 
             switch (choice) {
